@@ -1,0 +1,56 @@
+insert into city values(08,'Jalandhar','Punjab');
+insert into city values(11,'Amritsar','Punjab');
+insert into city values(15,'Gurgaon','Haryana');
+insert into city values(27,'Bangalore','Karnataka');
+insert into city values(30,'Hyderabad','Telangana');
+
+ insert into int_rate values(null,18,08,10.1,'education',7);
+ insert into int_rate values(null,25,11,15.6,'home',10);
+ insert into int_rate values(null,30,15,12.5,'gold',5);
+ insert into int_rate values(null,25,27,13,'education',7);
+ insert into int_rate values(null,50,08,12,'home',8);
+
+
+insert into account values(7887890768,178781,'savings');
+insert into account values(7567590768,1767871,'current');
+
+insert into employee values(1, 8);
+
+insert into transaction values(null,'debit',sysdate,1,10000);
+
+insert into users values(101,'male','7687687687','aiana.v','joker','aiana','verma','13-APR-2020',08,'manager');
+insert into employee values(101,10);
+insert into users values(102,'male','7687687687','yash.s','joker2','yash','s','23-APR-2020',11,'customer');
+insert into customers values(102,1081876);
+insert into users values(103,'male','7687687687','aiana.l','joker3','aianas','vermas','13-MAR-2020',09,'customer');
+
+insert into users values(104,'male','7687687687','yash.ss','joker4','yashs','ss','23-MAR-2020',30,'manager');
+
+
+insert into users values(105,'male','7687687687','aiana.ll','joker5','aianas','vermas','13-MAR-2020',11,'customer');
+
+
+insert into approved_loan values(1003, 102,'education',300430,'online',10.1,12312,10,330000,101);
+
+insert into approved_loan values(1005, 102,'gold',300430,'online',10.1,12312,10,330000,101);
+insert into approved_loan values(1004, 102,'home',300430,'online',10.1,12312,10,330000,101);
+
+insert into loan_application values(1,103,'education',323425,'online',10.1,34242,10);
+insert into loan_application values(1043,102,'home',20000.3,'online',10.6,10000.95,8);
+
+insert into loan_application values(3000,102,'home', 20000.3,'online',10.6,10000.95,8);
+
+
+insert into loan_application values(2,102,'home',323425,'online',10.1,34242,10);
+
+insert into loan_application values(3,101,'home',323425,'online',10.1,34242,10);
+insert into account values(1081876,2000000,'current');
+
+
+
+insert into loan_application (cust_id,loan_type,loan_amt,mode_pymnt,int_rate,emi_val,tenure) values(102,'home',838462,'online',5.6,2334,10);
+
+insert into users values(110,'male','8851620430','yash.sarawgi3@gmail.com','joker123','Yash','Sarawgi','28-DEC-1997',15,'CUSTOMER');
+insert into loan_application values(1003,102,'home',20000.3,'online',10.6,10000.95,8);
+commit;
+

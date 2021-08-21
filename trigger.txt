@@ -1,0 +1,18 @@
+create or replace trigger audit_cycle
+After insert on loan_application
+for each row
+begin
+insert into audit_log(app_id,cust_id,loan_type,loan_amt,mode_pymnt,int_rate,emi_val,tenure,status) values 
+(:new.app_id,:new.cust_id,:new.loan_type,:new.loan_amt,:new.mode_pymnt,:new.int_rate,
+:new.emi_val,:new.tenure,'pending');
+end;
+/
+create or replace trigger audit_approved
+After insert on approved_loan
+for each row
+begin
+insert into audit_log(app_id,cust_id,loan_type,loan_amt,mode_pymnt,int_rate,emi_val,tenure,loan_bal,mgr_id,status) values 
+(:new.app_id,:new.cust_id,:new.loan_type,:new.loan_amt,:new.mode_pymnt,:new.int_rate,
+:new.emi_val,:new.tenure,:new.loan_bal,:new.mgr_id,'approved');
+end;
+/
